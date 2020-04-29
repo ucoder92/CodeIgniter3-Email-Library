@@ -241,7 +241,7 @@ foreach ($list as $name => $address)
 
 `$this->sendmail->send($auto_clear = true, $print_debugger = array('subject'));` 
 
-Parameters: **$auto_clear** (string) Whether to clear message data automatically, **$print_debugger** (array) Which parts of the message to print out
+Parameters: **$auto_clear** (string) Whether to clear message data automatically, **$print_debugger** (array) Which parts of the message to print out on `$this->sendmail->error`. Valid options are: headers, subject, body.
 
 ```
 // You need to pass FALSE while sending in order for the email data
