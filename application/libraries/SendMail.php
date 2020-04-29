@@ -36,7 +36,7 @@ class SendMail
     public function __construct()
     {
         $this->ci = &get_instance();
-        $this->ci->config->load('smtp', true);
+        $this->ci->config->load('email_send', true);
 
         $this->init();
     }
@@ -59,8 +59,8 @@ class SendMail
 
     public function config($array = array())
     {
-        if (isset($this->ci->config->config['smtp']) && $this->ci->config->config['smtp']) {
-            $config = $this->ci->config->config['smtp'];
+        if (isset($this->ci->config->config['email_send']) && $this->ci->config->config['email_send']) {
+            $config = $this->ci->config->config['email_send'];
         }
 
         if ($array && is_array($array)) {
