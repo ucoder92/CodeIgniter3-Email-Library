@@ -245,7 +245,7 @@ Parameters: **$auto_clear** (string) Whether to clear message data automatically
 
 ```
 // You need to pass FALSE while sending in order for the email data
-// to not be cleared - if that happens, print_debugger() would have
+// to not be cleared - if that happens, $this->sendmail->error would have
 // nothing to output.
 $this->sendmail->send(FALSE);
 
