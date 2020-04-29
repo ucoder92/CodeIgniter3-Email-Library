@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  * @package     CodeIgniter Library
  * @author      Ulugbek Nuriddinov <hello@ucolabs.com>
- * @link        https://github.com/ucoder92/ci_email_library
+ * @link        https://github.com/ucoder92/CodeIgniter3-Email-Library
  * @since       1.0.0
  */
 
