@@ -32,7 +32,6 @@ class SendMail
 
     public $success;
     public $error;
-    public $message;
 
     public function __construct()
     {
@@ -212,7 +211,6 @@ class SendMail
                 $this->setError($this->ci->email->print_debugger($print_debugger));
             } else {
                 $this->success = false;
-                $this->message = "Your email was sent successfully";
             }
         }
     }
