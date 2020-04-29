@@ -25,7 +25,7 @@ $this->sendmail->message('Hello world!');
 $this->sendmail->send();
 
 if ($this->sendmail->success) {
-    echo $this->sendmail->message;
+    echo 'Your email was sent successfully';
 } else {
     echo $this->sendmail->error;
 }
