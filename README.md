@@ -36,7 +36,7 @@ if ($this->sendmail->success) {
 
 `$this->sendmail->config($array = array());`
 
-Parameters: **$array** (array) Set or replace config by the way
+Parameters: **$array** (array) Set or replace config
 
 ```
 $config['wordwrap'] = FALSE;
