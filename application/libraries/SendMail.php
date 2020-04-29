@@ -20,7 +20,6 @@ class SendMail
     private $_message;
     private $_subject;
     private $_sendTo;
-    private $_sendToArray;
     private $_sendToCC;
     private $_reply_to_email;
     private $_reply_to_name;
@@ -88,9 +87,9 @@ class SendMail
         $this->_fromName = $name;
     }
 
-    public function message($message)
+    public function message($body)
     {
-        $this->_message = $message;
+        $this->_message = $body;
     }
 
     public function subject($subject)
@@ -100,11 +99,7 @@ class SendMail
 
     public function to($email)
     {
-        if (is_array($email)) {
-            $this->_sendToArray = $email;
-        } else {
-            $this->_sendTo = $email;
-        }
+        $this->_sendTo = $email;
     }
 
     public function cc($email)
@@ -123,7 +118,7 @@ class SendMail
         $this->_set_alt_message = $message;
     }
 
-    public function set_header($header, $value = false)
+    public function set_header($header, $value)
     {
         if (is_array($header) && $header) {
             $this->_set_header_array = $header;
@@ -185,11 +180,7 @@ class SendMail
                 }
             }
 
-            if ($this->_sendToArray) {
-                $this->ci->email->to($this->_sendToArray);
-            } else {
-                $this->ci->email->to($this->_sendTo);
-            }
+            $this->ci->email->to($this->_sendTo);
 
             if ($this->_sendToCC) {
                 $this->ci->email->cc($this->_sendToCC);
