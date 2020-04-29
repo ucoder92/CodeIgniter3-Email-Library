@@ -8,7 +8,7 @@ Download and move files from this package to the corresponding folder structure:
 CI                          # → Root Directory
 └── application/
     ├── config/
-    │   └── smtp.php
+    │   └── email_send.php
     ├── libraries
     │   └── SendMail.php
 ```
