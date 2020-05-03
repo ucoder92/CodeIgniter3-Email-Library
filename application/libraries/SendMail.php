@@ -203,7 +203,7 @@ class SendMail
                 }
             }
 
-            $this->ci->email->from($this->_fromEmail);
+            $this->ci->email->from($this->_fromEmail, $this->_fromName);
             $this->ci->email->subject($this->_subject);
             $this->ci->email->message($this->_message);
 
