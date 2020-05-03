@@ -210,7 +210,7 @@ class SendMail
             if (!$this->ci->email->send($auto_clear)) {
                 $this->setError($this->ci->email->print_debugger($print_debugger));
             } else {
-                $this->success = false;
+                $this->success = true;
             }
         }
     }
